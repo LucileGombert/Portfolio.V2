@@ -44,6 +44,7 @@ canvas.addEventListener('mousemove', function(event) {
   }
 })
 
+
 function drawCircle() {
   ctx.fillStyle = '#2fa09c';
   ctx.beginPath();
@@ -108,6 +109,17 @@ function animate() {
 }
 animate();
 
+// Canvas mobilephone
+window.onload = function () {
+  Particles.init({
+    selector: ".background"
+  });
+};
+var particles = Particles.init({
+  selector: ".background",
+  color: ['#03dac6', '#e3f5f4', '#66ccc4'],
+  connectParticles: true,
+});
 
 
 //Typewritter title

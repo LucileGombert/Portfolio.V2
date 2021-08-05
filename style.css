@@ -205,7 +205,7 @@ a {
     animation: loaderAppaer 3s;
 }
 .loader_section h1 {
-    background: linear-gradient(to right, hsl(174 19% 92%), hsl(204 100% 59%));
+    background: linear-gradient(120deg, #e3f5f4 0%, #2fa09c 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -373,6 +373,9 @@ a {
     left: 0;
     width: 99%;
 }
+.background {
+    display: none;
+}
 
 
     /* Skills section */
@@ -401,12 +404,11 @@ a {
 .hexagon_bloc {
     position: absolute;
     margin-left: 5rem;
-    /* left: 65rem; */
 }
 .hexagon {
     width: 60px; 
     height: 40px;
-    background: #64C7CC;
+    background: #2fa09c;
     position: absolute;
     background-repeat: no-repeat;
     background-position: center;
@@ -420,12 +422,12 @@ a {
 }
 .hexagon:before {
     bottom: 100%;
-    border-bottom: 17.32px solid #64C7CC;
+    border-bottom: 17.32px solid #2fa09c;
 }
 .hexagon:after {
     top: 100%;
     width: 0;
-    border-top: 17.32px solid #64C7CC;
+    border-top: 17.32px solid #2fa09c;
 }
 .hex2, .hex3, .hex5, .hex6, .hex8, .hex9, .hex11, .hex12, .hex13, .hex15, .hex16, .hex17, .hex19, .hex20, .hex22, .hex23, .hex24{
     animation-name: rotationY; 
@@ -811,7 +813,7 @@ strong {
     cursor: pointer;
     color: black;
     border-radius: 5px;
-    box-shadow: inset 40rem 0 0 0 #03e9f4;
+    box-shadow: inset 40rem 0 0 0 #2fa09c;
 }
 .form_box button span {
     position: absolute;
@@ -1094,7 +1096,7 @@ strong {
         min-height: 126px; 
         width: 80%;
         padding: 0;
-        margin: 2rem auto;
+        margin: 2rem auto 0 auto;
     }
     .nav_div {
         display: flex;
@@ -1146,16 +1148,33 @@ strong {
     }
     
     /* All sections */
-    #skills_section, #projects_section, #about_section, #contact_section {
+    #projects_section, #about_section, #contact_section {
         margin: 3rem;
         padding-top: 3rem;
+    }
+    #skills_section {
+        margin: 0 3rem 3rem 3rem;
+        padding-top: 0;
     }
 
 
     /* Home section */
+    #home_section {
+        max-height: 550px;
+    }
     .home_text {
         margin: 0 2rem;
         text-align: center;
+    }
+
+    #canvas {
+        display: none;
+    }
+    .background {
+        position: absolute;
+        display: block;
+        left: 0;
+        max-height: 460px;
     }
 
     /* Projects section */
@@ -1208,6 +1227,12 @@ strong {
     #home_section {
         font-size: 24px;
     }
+    .home_text{
+        margin-top: -5rem;
+    }
+    .home_text h2 {
+        margin-top: 0;
+    }
 
 
     /* Skills section */
@@ -1234,10 +1259,10 @@ strong {
         border-right: 25px solid transparent;
     }
     .hexagon:before {
-        border-bottom: 13.32px solid #64C7CC;
+        border-bottom: 13.32px solid #2fa09c;
     }
     .hexagon:after {
-        border-top: 13.32px solid #64C7CC;
+        border-top: 13.32px solid #2fa09c;
     }
     .hex1 {
         top: 20px;
@@ -1446,3 +1471,5 @@ strong {
         margin-left: 1rem;
     }
 }
+
+
