@@ -1,14 +1,3 @@
-// Navbar responsive
-let navToggle = document.querySelector('.nav_toggle');
-let nav = document.querySelector('.nav_bloc');
-
-navToggle.addEventListener('click', function() {
-  navToggle.classList.toggle('active');
-  nav.classList.toggle('active')
-})
-
-
-
 // Canvas
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
@@ -25,7 +14,7 @@ window.addEventListener('resize', function() {
 const mouse = {
   x: undefined,
   y: undefined,
-}
+};
 
 canvas.addEventListener('click', function(event) {
   mouse.x = event.x;
@@ -33,7 +22,7 @@ canvas.addEventListener('click', function(event) {
   for (let i = 0; i < 10; i++) {
     partciclesArray.push(new Particle());
   }
-})
+});
  
 
 canvas.addEventListener('mousemove', function(event) {
@@ -42,7 +31,7 @@ canvas.addEventListener('mousemove', function(event) {
   for (let i = 0; i < 5; i++) {
     partciclesArray.push(new Particle());
   }
-})
+});
 
 
 function drawCircle() {

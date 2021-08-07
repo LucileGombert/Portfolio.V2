@@ -1,5 +1,4 @@
 // Contact form
-
 function checkInputs() {
   let btnSubmit = document.getElementById("btn_submit");
 
@@ -63,7 +62,7 @@ function checkInputs() {
 
     let message = document.getElementById('message');
     let messageMissing = document.getElementById('messageMissing');
-    let messageValidation = /^[^><%#!$/(){}]{15,400}$/;
+    let messageValidation = /^[^><%#$/(){}]{5,400}$/;
 
     if (message.validity.valueMissing) {
       e.preventDefault();
@@ -78,7 +77,7 @@ function checkInputs() {
     } else if (messageValidation.test(message.value) == false) {
       e.preventDefault();
 
-      messageMissing.textContent = 'Votre message doit contenir entre 15 et 400 caractères sans caractères spéciaux';
+      messageMissing.textContent = 'Votre message doit contenir entre 5 et 400 caractères sans caractères spéciaux';
       messageMissing.style.color = 'orange';
 
       setTimeout(function() {

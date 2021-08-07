@@ -138,27 +138,10 @@ a {
     color: white;
     transition: .3s ease-out all;
 }
-.footer_legalLink::after {
-    content: "";
-    position: relative;
-    width: 0;
-    height: 1px;
-    display: block;
-    z-index: 100;
-    background-color: cyan;
-    transition: .3s ease-out all;
-    left: 64.5%;
-    top: 5px;
-    transform: translateX(-50%);
+.footer_legalLink:hover {
+    border-bottom: 1px solid cyan;
 }
-.footer_legalLink:hover::after {
-    width: 90px;
-}
-.fa-facebook:hover {
-    color: #03e9f4;
-    text-shadow: 0 0 15px #03e9f4;
-    transition: all 0.5s ease;
-  }
+
 
 
 
@@ -408,7 +391,7 @@ a {
 .hexagon {
     width: 60px; 
     height: 40px;
-    background: #2fa09c;
+    background: #99e3dd;
     position: absolute;
     background-repeat: no-repeat;
     background-position: center;
@@ -422,12 +405,12 @@ a {
 }
 .hexagon:before {
     bottom: 100%;
-    border-bottom: 17.32px solid #2fa09c;
+    border-bottom: 17.32px solid #99e3dd;
 }
 .hexagon:after {
     top: 100%;
     width: 0;
-    border-top: 17.32px solid #2fa09c;
+    border-top: 17.32px solid #99e3dd;
 }
 .hex2, .hex3, .hex5, .hex6, .hex8, .hex9, .hex11, .hex12, .hex13, .hex15, .hex16, .hex17, .hex19, .hex20, .hex22, .hex23, .hex24{
     animation-name: rotationY; 
@@ -621,6 +604,7 @@ a {
     margin: 0 0.5rem 0.5rem 0;
     border-radius: 15px;
     font-weight: bold; 
+    color: black;
 }
 .overlay_link {
     background-color: transparent;
@@ -733,7 +717,7 @@ a {
     margin: 0.5rem;
 }
 .about_text {
-    text-align: justify;
+    /* text-align: justify; */
     color: white;
 }
 strong {
@@ -787,7 +771,6 @@ strong {
     padding: 10px 0;
     font-size: 16px;
     color: #fff;
-    pointer-events: none;
     transition: .5s;
 }
 .form_input:focus ~ label, .form_input:valid ~ label {
@@ -1007,13 +990,27 @@ strong {
 
 
 /* Media queries */
+@media (min-width: 1800px) {
+    /* Skills section*/
+    .techno_images {
+        margin-left: 8rem;
+    }
+}
+
+
 @media (max-width: 1535px) {
     /* Projects section*/
     .project_bloc {
         display: flex;
         justify-content: center;
     }
+
+    /* About page */
+    .border {
+        margin: 0 1rem;
+    }
 }
+
 @media (max-width: 1360px) {
     /* All sections */
     #skills_section, #projects_section, #about_section, #contact_section {
@@ -1114,16 +1111,12 @@ strong {
         margin: 10px;
         float: right;
         cursor: pointer;
-        color: white;
     }
     .nav_toggle::before {
-        content: '\f0c9';
-        font-family: fontAwesome;
-        padding-top: 0.5rem;
+        content: url(images/burgermenu.png);
     }
     .nav_toggle.active::before {
-        content: '\f00d';
-        font-family: fontAwesome;
+        content: url(images/closemenu.png);
     }
     .nav_bloc {
         display: none;
@@ -1215,6 +1208,11 @@ strong {
         width: 40%;
     }
 
+    /* Footer */
+    .shadow {
+        width: 30px;
+    }
+
     /* All sections */
     .section_title {
         font-size: 22px;
@@ -1259,10 +1257,10 @@ strong {
         border-right: 25px solid transparent;
     }
     .hexagon:before {
-        border-bottom: 13.32px solid #2fa09c;
+        border-bottom: 13.32px solid #99e3dd;
     }
     .hexagon:after {
-        border-top: 13.32px solid #2fa09c;
+        border-top: 13.32px solid #99e3dd;
     }
     .hex1 {
         top: 20px;
